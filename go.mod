@@ -19,7 +19,7 @@ require (
 	github.com/lightninglabs/gozmq v0.0.0-20180324010646-462a8a753885
 	github.com/onsi/ginkgo v1.7.0 // indirect
 	github.com/onsi/gomega v1.4.3 // indirect
-	github.com/soteria-dag/soterd v0.0.0-20190509181319-815e7371acc4
+	github.com/soteria-dag/soterd v0.0.0-20190515211118-fc811bc59404
 	go.etcd.io/bbolt v1.3.2 // indirect
 	golang.org/x/crypto v0.0.0-20190325154230-a5d413f7728c
 	golang.org/x/net v0.0.0-20190328230028-74de082e2cca
