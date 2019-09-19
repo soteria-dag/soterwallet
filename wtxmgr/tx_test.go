@@ -106,7 +106,7 @@ func TestInsertsCreditsDebitsRollbacks(t *testing.T) {
 
 	// Create a double spend of the received blockchain transaction.
 	dupRecvTx, _ := soterutil.NewTxFromBytes(TstRecvSerializedTx)
-	// Switch txout amount to 1 SOTO.  Transaction store doesn't
+	// Switch txout amount to 1 SOTER.  Transaction store doesn't
 	// validate txs, so this is fine for testing a double spend
 	// removal.
 	TstDupRecvAmount := int64(1e8)
@@ -707,7 +707,7 @@ func TestCoinbases(t *testing.T) {
 
 	coinbaseMaturity := int32(chaincfg.TestNet1Params.CoinbaseMaturity)
 
-	// Balance should be 0 if the coinbase is immature, 50 SOTO at and beyond
+	// Balance should be 0 if the coinbase is immature, 50 SOTER at and beyond
 	// maturity.
 	//
 	// Outputs when depth is below maturity are never included, no matter

@@ -27,7 +27,7 @@ import (
 // MAX_STANDARD_TX_SIZE.
 const txMaxSize = 100000
 
-// feeIncrement is the minimum transation fee (0.00001 SOTO, measured in nanoSoter)
+// feeIncrement is the minimum transation fee (0.00001 SOTER, measured in nanoSoter)
 // added to transactions requiring a fee.
 const feeIncrement = 1e3
 

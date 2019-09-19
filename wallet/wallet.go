@@ -1924,7 +1924,7 @@ func listTransactions(tx walletdb.ReadTx, details *wtxmgr.TxDetails, addrMgr *wa
 		// Note: The actual fee is debitTotal - outputTotal.  However,
 		// this RPC reports negative numbers for fees, so the inverse
 		// is calculated.
-		feeF64 = (outputTotal - debitTotal).ToSOTO()
+		feeF64 = (outputTotal - debitTotal).ToSOTER()
 	}
 
 outputs:
@@ -1961,7 +1961,7 @@ outputs:
 			}
 		}
 
-		amountF64 := soterutil.Amount(output.Value).ToSOTO()
+		amountF64 := soterutil.Amount(output.Value).ToSOTER()
 		result := soterjson.ListTransactionsResult{
 			// Fields left zeroed:
 			//   InvolvesWatchOnly
@@ -2624,7 +2624,7 @@ func (w *Wallet) ListUnspent(minconf, maxconf int32,
 				Vout:          output.OutPoint.Index,
 				Account:       acctName,
 				ScriptPubKey:  hex.EncodeToString(output.PkScript),
-				Amount:        output.Amount.ToSOTO(),
+				Amount:        output.Amount.ToSOTER(),
 				Confirmations: int64(confs),
 				Spendable:     spendable,
 			}

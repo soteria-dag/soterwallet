@@ -16,11 +16,11 @@ import (
 
 var (
 	// Spends: bogus
-	// Outputs: 10 SOTO
+	// Outputs: 10 SOTER
 	exampleTxRecordA *TxRecord
 
 	// Spends: A:0
-	// Outputs: 5 SOTO, 5 SOTO
+	// Outputs: 5 SOTER, 5 SOTER
 	exampleTxRecordB *TxRecord
 )
 
@@ -80,7 +80,7 @@ func ExampleStore_Balance() {
 		fmt.Printf("%v, %v, %v\n", zeroConfBal, oneConfBal, sixConfBal)
 	}
 
-	// Insert a transaction which outputs 10 SOTO unmined and mark the output
+	// Insert a transaction which outputs 10 SOTER unmined and mark the output
 	// as a credit.
 	err = walletdb.Update(db, func(tx walletdb.ReadWriteTx) error {
 		ns := tx.ReadWriteBucket(namespaceKey)
@@ -110,9 +110,9 @@ func ExampleStore_Balance() {
 	printBalances(105)
 
 	// Output:
-	// 1 SOTO, 0 SOTO, 0 SOTO
-	// 1 SOTO, 1 SOTO, 0 SOTO
-	// 1 SOTO, 1 SOTO, 1 SOTO
+	// 1 SOTER, 0 SOTER, 0 SOTER
+	// 1 SOTER, 1 SOTER, 0 SOTER
+	// 1 SOTER, 1 SOTER, 1 SOTER
 }
 
 func ExampleStore_Rollback() {
@@ -126,7 +126,7 @@ func ExampleStore_Rollback() {
 	err = walletdb.Update(db, func(tx walletdb.ReadWriteTx) error {
 		ns := tx.ReadWriteBucket(namespaceKey)
 
-		// Insert a transaction which outputs 10 SOTO in a block at height 100.
+		// Insert a transaction which outputs 10 SOTER in a block at height 100.
 		err := s.InsertTx(ns, exampleTxRecordA, &exampleBlock100)
 		if err != nil {
 			return err
@@ -194,7 +194,7 @@ func Example_basicUsage() {
 		return
 	}
 
-	// Insert an unmined transaction that outputs 10 SOTO to a wallet address
+	// Insert an unmined transaction that outputs 10 SOTER to a wallet address
 	// at output 0.
 	err = s.InsertTx(b, exampleTxRecordA, nil)
 	if err != nil {
@@ -208,7 +208,7 @@ func Example_basicUsage() {
 	}
 
 	// Insert a second transaction which spends the output, and creates two
-	// outputs.  Mark the second one (5 SOTO) as wallet change.
+	// outputs.  Mark the second one (5 SOTER) as wallet change.
 	err = s.InsertTx(b, exampleTxRecordB, nil)
 	if err != nil {
 		fmt.Println(err)
@@ -251,6 +251,6 @@ func Example_basicUsage() {
 	}
 
 	// Output:
-	// 0.5 SOTO
+	// 0.5 SOTER
 	// true
 }

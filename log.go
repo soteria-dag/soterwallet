@@ -53,13 +53,13 @@ var (
 	// is written to by the Write method of the logWriter type.
 	logRotatorPipe *io.PipeWriter
 
-	log          = backendLog.Logger("SOTOW")
+	log          = backendLog.Logger("SOTERW")
 	walletLog    = backendLog.Logger("WLLT")
 	txmgrLog     = backendLog.Logger("TMGR")
 	chainLog     = backendLog.Logger("CHNS")
 	grpcLog      = backendLog.Logger("GRPC")
 	legacyRPCLog = backendLog.Logger("RPCS")
-	sotonLog     = backendLog.Logger("SOTON")
+	soternLog    = backendLog.Logger("SOTERN")
 )
 
 // Initialize package-global logger variables.
@@ -74,13 +74,13 @@ func init() {
 
 // subsystemLoggers maps each subsystem identifier to its associated logger.
 var subsystemLoggers = map[string]soterlog.Logger{
-	"SOTOW": log,
-	"WLLT":  walletLog,
-	"TMGR":  txmgrLog,
-	"CHNS":  chainLog,
-	"GRPC":  grpcLog,
-	"RPCS":  legacyRPCLog,
-	"SOTON": sotonLog,
+	"SOTERW": log,
+	"WLLT":   walletLog,
+	"TMGR":   txmgrLog,
+	"CHNS":   chainLog,
+	"GRPC":   grpcLog,
+	"RPCS":   legacyRPCLog,
+	"SOTERN": soternLog,
 }
 
 // initLogRotator initializes the logging rotater to write logs to logFile and
