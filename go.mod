@@ -16,12 +16,14 @@ require (
 	github.com/jessevdk/go-flags v1.4.0
 	github.com/jrick/logrotate v1.0.0
 	github.com/kkdai/bstream v0.0.0-20181106074824-b3251f7901ec // indirect
+	github.com/kr/pretty v0.1.0 // indirect
 	github.com/lightninglabs/gozmq v0.0.0-20180324010646-462a8a753885
 	github.com/onsi/ginkgo v1.7.0 // indirect
 	github.com/onsi/gomega v1.4.3 // indirect
-	github.com/soteria-dag/soterd v0.0.0-20190925034313-a8bab3af892d
+	github.com/soteria-dag/soterd v0.0.0-20191010173247-c452e5c157c5
 	go.etcd.io/bbolt v1.3.2 // indirect
-	golang.org/x/crypto v0.0.0-20190325154230-a5d413f7728c
-	golang.org/x/net v0.0.0-20190328230028-74de082e2cca
+	golang.org/x/crypto v0.0.0-20190621222207-cc06ce4a13d4
+	golang.org/x/net v0.0.0-20190503192946-f4e77d36d62c
 	google.golang.org/grpc v1.19.1
+	gopkg.in/check.v1 v1.0.0-20190902080502-41f04d3bba15 // indirect
 )
